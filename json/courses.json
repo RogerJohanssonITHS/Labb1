@@ -1,0 +1,28 @@
+{
+    "kurser": [
+	{
+        "namn": "Python som ersättare för JavaScript",
+		"undervisningsform": ["klassrum", "distans", "on demand"],
+		"innehåll": "Vi lär använda Python som skriptspråk för hemsidor.",
+		"förkunskapskrav": ["Python 3.6+ på nybörjarnivå."],
+		"lärare": [
+			{"förnamn": "Kalle"},
+			{"efternamn": "Anka"}
+		],
+		"medelbetyg": 3.4
+	},
+	{
+        "namn": "Julia",
+		"undervisningsform": ["klassrum", "distans"],
+		"innehåll": "Julia kan bli nästa generation av Python. Vi lär oss språkets syntax och hur man kommer igång.",
+		"förkunskapskrav": ["Python 3.6+ på avancerad nivå.", "Kompilerade språk - vad är det?"],
+		"lärare": [
+			{"förnamn": "Janne"},
+			{"efternamn": "Långben"}
+		],
+		"medelbetyg": 3.9
+	}
+]
+}
+
+

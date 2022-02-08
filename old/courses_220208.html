@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style_lab1.css" />
+    <title>Kurser - WestCoast Education</title>
+  </head>
+  <body>
+
+    <div class="grid-container-main">
+      <ul class="navbar grid-item-1">
+        <li class="nav-item">
+          <a href="../index.html">Start</a>
+        </li>
+        <li class="nav-item active">
+          <a href="pages/courses.html">Kurser</a>
+        </li>
+        <li class="nav-item" style="float: right">
+          <a href="login.html">Inloggning</a>
+        </li>
+      </ul>
+      <div class="grid-item grid-item-2 content">
+        På WestCoast Education erbjuder vi en mängd intressanta och lärorika kurser. 
+        Vi vet att du som kund har en mängd önskemål kring kursinnehåll och upplägg.
+        Klicka för undervisningsform och välj kurser:
+      </div>
+
+      <div class="grid-item grid-item-3 content">         
+          <label for="klassrum">
+            <input type="checkbox" id="klassrum" name="klassrum" value="klassrum"> Klassrum
+            <input type="checkbox" id="distans" name="distans" value="distans"> Distans
+            <input type="checkbox" id="ondemand" name="ondemand" value="ondemand"> On demand
+          </label>
+
+          <button onclick="myFunction()">Visa</button>
+      </div>
+
+      <label for="courses">Välj kurs:</label>
+        <select name="courses" id="courses">
+          <optgroup label="Klassrum">
+            <option value="Kurs1">Kurs 1</option>
+            <option value="Kurs2">Kurs 2</option>
+          </optgroup>
+          <optgroup label="Distans">
+            <option value="Kurs1">Kurs 1</option>
+            <option value="Kurs2">Kurs 2</option>
+          </optgroup>
+          <optgroup label="On demand">
+            <option value="Kurs2">Kurs 2</option>
+            <option value="Kurs3">Kurs 3</option>
+          </optgroup>
+        </select>
+    </div>
+    <script src="../script/ds.js">
+    </script>
+  </body>
+</html>

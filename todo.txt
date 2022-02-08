@@ -1,0 +1,8 @@
+Skapa objekt med kurserna på ett JSON-format.
+Kan tillsvidare läggas i javascript-filen.
+
+Utifrån val av undervisningsmetod, skapa
+type = "checkbox" där man kan välja kursen
+(sedan lägga i varukorg). Köpa markerade-knapp?
+
+Visa sidan på laptop och nalle. @media.
