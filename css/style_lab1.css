@@ -1,7 +1,8 @@
 body {
   font-size: 1em;
+  color: rgb(31, 39, 27);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, monospace;
-  background-color: rgb(195, 195, 218);
+  background-color: rgb(203, 185, 168);
 }
 
 /*********** Form ***********/
@@ -37,6 +38,8 @@ label {
 
 .button{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(31, 39, 27);
+  background-color: rgb(203, 185, 168);
   width: auto;
   height: 30px;
   padding: 5px 5px px 5px;
@@ -78,7 +81,7 @@ label {
 /*********** Content ***********/
 
 .content {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgb(220, 199, 190);
 }
 
 /*********** Nav ***********/
@@ -86,7 +89,7 @@ label {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  background-color: royalblue;
+  background-color: rgb(203, 185, 168);
   overflow: hidden;
   min-height: 10%;
 }
@@ -95,7 +98,7 @@ label {
 }
 .nav-item a {
   display: block;
-  color: #9E2203;
+  color: rgb(11, 79, 108);
   letter-spacing: 0.1em;
   font-size: 1.5em;
   text-align: center;

@@ -6,3 +6,11 @@ type = "checkbox" där man kan välja kursen
 (sedan lägga i varukorg). Köpa markerade-knapp?
 
 Visa sidan på laptop och nalle. @media.
+github pages.
+
+Bilder för kurserna.
+
+Färger på knapparna.
+
+
+
