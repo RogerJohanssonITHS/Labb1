@@ -36,6 +36,18 @@ label {
   top: -2px;
 }
 
+.input-text {
+  width: 150px;
+  height: 18px;
+  padding: 0px;
+  margin: 0;
+  margin-right: 2px;
+  margin-left: 0px;
+  vertical-align: bottom;
+  position: relative;
+  top: 2px;
+}
+
 .button{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: rgb(31, 39, 27);
@@ -47,6 +59,13 @@ label {
   margin-left: 0px;
   vertical-align: bottom;
   position: relative;
+}
+
+/*********** Table ***********/
+
+
+table {
+  border-spacing: 10px;
 }
 
 /*********** Grid ***********/

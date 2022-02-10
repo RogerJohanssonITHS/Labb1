@@ -1,133 +1,66 @@
-let person1 = {
-    firstName: "Kalle",
-    lastName: "Anka",
-    birthDate: "1945-12-24"
-}
+const jsonRequest = new Request("../json/courses.json");
 
-let person2 = {
-    firstName: "Janne",
-    lastName: "Långben",
-    birthDate: "1953-02-12"
-}
 
-let person3 = {
-    firstName: "Benjamin",
-    lastName: "Syrsa",
-    birthDate: "1967-05-01"
-}
+const courses = [];
 
-let person4 = {
-    firstName: "Konrad",
-    lastName: "Kabat",
-    birthDate: "1987-11-06"
-}
+class Course {
+    constructor(input) {
+      this.courseName = input.courseName;
+      this.image = input.image;
+      this.learningPath = input.learningPath;
+      this.contents = input.contents;
+      this.prerequisites = input.prerequisites;
+      this.teacher = input.teacher;
+      this.averagescore = input.averagescore;
 
-const persons = [person1, person2, person3, person4];
-/*
-{
-    "kurser": [
-	{
-        "namn": "Python som ersättare för JavaScript",
-		"undervisningsform": ["klassrum", "distans", "on demand"],
-		"innehåll": "Vi lär använda Python som skriptspråk för hemsidor.",
-		"förkunskapskrav": ["Python 3.6+ på nybörjarnivå."],
-		"lärare": [
-			{"förnamn": "Kalle"},
-			{"efternamn": "Anka"}
-		],
-		"medelbetyg": 3.4
-	},
-	{
-        "namn": "Julia",
-		"undervisningsform": ["klassrum", "distans"],
-		"innehåll": "Julia kan bli nästa generation av Python. Vi lär oss språkets syntax och hur man kommer igång.",
-		"förkunskapskrav": ["Python 3.6+ på avancerad nivå.", "Kompilerade språk - vad är det?"],
-		"lärare": [
-			{"förnamn": "Janne"},
-			{"efternamn": "Långben"}
-		],
-		"medelbetyg": 3.9
-	}
-]
-}
-*/
+    }
+  }
 
-//create test list with courses
-let course1 = {
-    courseName: "Brython",
-    imageName: "Brython.png",
-    learningPath: ["klassrum", "distans"],
-    contents: "Vi lär oss använda Python som skriptspråk för hemsidor.",
-    prerequisites: ["Python 3.6+ på nybörjarnivå."],
-    teacher: 
-        {firstName: "Kalle",
-        lastName: "Anka"},
-    averageScore: 3.4
-}
+  fetch(jsonRequest)
+  .then((response) => response.json())
+  .then((data) => {
+    for (let i = 0; i < data.length; i++) {
+      const course = new Course(data[i]);
+      courses.push(course);
+    }
+    //createCourseList(courses);
+  })
+  .catch(console.error);
 
-let course2 = {
-    courseName: "Julia",
-    imageName: "Julia.svg",
-    learningPath: ["klassrum", "distans", "on demand"],
-    contents: "Julia kan bli nästa generation av Python. Vi lär oss språkets syntax och hur man kommer igång.",
-    prerequisites: ["Python 3.6+ på avancerad nivå.", "Kompilerade språk - vad är det?"],
-    teacher: 
-        {firstName: "Janne",
-        lastName: "Långben"},
-    averageScore: 3.9
-}
-
-let course3 = {
-    courseName: "COBOL",
-    imageName: "COBOL.png",
-    learningPath: ["on demand"],
-    contents: "COBOL kommer att leva kvar länge och kompetens inom programmespråket börjar bli en bristvara.",
-    prerequisites: [""],
-    teacher: 
-        {firstName: "Kajsa",
-        lastName: "Anka"},
-    averageScore: 4.6
-}
-
-let courses = [course1, course2, course3];
-
-function createList() {
-    var isItCreated = document.getElementById("myList");
+//creates table with course info from the filtered list
+function displayFilteredCourseList() {
+    var isItCreated = document.getElementById("myFilteredCourseList");
     if(isItCreated){
         return;
     }
-    let div = document.createElement('div');
-    div.id = 'myList';
+    //Which learningPath checkboxes are checked?
+    //var x = document.getElementById("myCheck").checked;
+    let div = document.createElement("div");
+    div.id = "myFilteredCourseList";
     document.body.appendChild(div);
-    var todaysDate = new Date();
-    for (let i = 0; i < persons.length; i++) {
-        var personBirthDate = new Date(persons[i].birthDate);
-        var personsAgeInYears = Math.trunc((todaysDate.getTime() - personBirthDate.getTime())/(1000*60*60*24*365));
-        div.innerHTML += `<p>${persons[i].firstName} ${persons[i].lastName} is ${personsAgeInYears} years</p>`
-    }
-}
-//creates table with course info
-function createCourseList() {
-    var isItCreated = document.getElementById("myList");
-    if(isItCreated){
-        return;
-    }
-    let div = document.createElement('div');
-    div.id = 'myList';
-    document.body.appendChild(div);
-    var todaysDate = new Date();
     for (let i = 0; i < courses.length; i++) {
-        //var personBirthDate = new Date(persons[i].birthDate);
-        //var personsAgeInYears = Math.trunc((todaysDate.getTime() - personBirthDate.getTime())/(1000*60*60*24*365));
-        div.innerHTML += `<input class="input" type="checkbox" id="klassrum" name="klassrum" value="klassrum"> Klassrum 
-        <img src="../images/${courses[i].imageName}" alt="Brython logo" width="200" height="125"><p>${courses[i].courseName} ${courses[i].contents}
-        Lärare: ${courses[i].teacher.firstName}</p>`
+        const course = courses[i];
+
+        //add course image and course description
+        div.innerHTML += `<table width = "600px"><tr><td><img src="../images/${course.image.imageName}" alt="${course.image.imageAltText}"
+        title="${course.image.imageTitle}" width="200" height="125"></td><td><p>${course.contents}<br>
+        Lärare: ${course.teacher.firstName} ${course.teacher.lastName}</p></td></tr></table>`
+
+        //loop over learningPath and add checkboxes
+        for (let j  = 0; j   < course.learningPath.length; j++) {
+            const element = course.learningPath[j];
+            div.innerHTML += `<input class="input-second" type="checkbox" id="${element}" name="${element}" value="klassrum"> ${element}`             
+        }
+        //add a divider
+        div.innerHTML += `<br><br><br>`
+
+
     }
 }
+
 
 function clearList() {
-    //document.getElementById("myList").innerHTML="";
-    var myList = document.getElementById("myList");
+    var myList = document.getElementById("myFilteredCourseList");
     myList.remove();
 }
 

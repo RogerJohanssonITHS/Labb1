@@ -1,28 +1,49 @@
-{
-    "kurser": [
+[
 	{
-        "namn": "Python som ersättare för JavaScript",
-		"undervisningsform": ["klassrum", "distans", "on demand"],
-		"innehåll": "Vi lär använda Python som skriptspråk för hemsidor.",
-		"förkunskapskrav": ["Python 3.6+ på nybörjarnivå."],
-		"lärare": [
-			{"förnamn": "Kalle"},
-			{"efternamn": "Anka"}
-		],
-		"medelbetyg": 3.4
+		"courseName": "Brython",
+		"image":
+			{"imageName":"Brython.png",
+			"imageAltText": "Brython logo",
+			"imageTitle": "Brython logo"},
+		"learningPath": ["Klassrum", "Distans"],
+		"contents": "Brython är en Python-baserad Javascript-ersättare.",
+		"prerequisites": ["Python 3.6+ på nybörjarnivå."],
+		"teacher": 
+			{"firstName": "Fredrik",
+			"lastName": "Fredriksson"},
+		"averageScore": 3.4
 	},
 	{
-        "namn": "Julia",
-		"undervisningsform": ["klassrum", "distans"],
-		"innehåll": "Julia kan bli nästa generation av Python. Vi lär oss språkets syntax och hur man kommer igång.",
-		"förkunskapskrav": ["Python 3.6+ på avancerad nivå.", "Kompilerade språk - vad är det?"],
-		"lärare": [
-			{"förnamn": "Janne"},
-			{"efternamn": "Långben"}
-		],
-		"medelbetyg": 3.9
+		"courseName": "Julia",
+		"image":
+			{"imageName":"Julia.svg",
+			"imageAltText": "Julia logo",
+			"imageTitle": "Julia logo"},
+		"learningPath": ["Klassrum", "Distans", "On demand"],
+		"contents": "Julia kan bli nästa generation av Python. Vi lär oss språkets syntax och hur man kommer igång.",
+		"prerequisites": ["Python 3.6+ på avancerad nivå.", "Kompilerade språk - vad är det?"],
+		"teacher": 
+			{"firstName": "August",
+			"lastName": "Lindberg"},
+		"averageScore": 3.9
+	},
+	{
+		"courseName": "COBOL",
+		"image":
+			{"imageName":"COBOL.png",
+			"imageAltText": "COBOL logo",
+			"imageTitle": "COBOL logo"},
+		"learningPath": ["On demand"],
+		"contents": "COBOL kommer att leva kvar länge och kompetens inom programmespråket börjar bli en bristvara.",
+		"prerequisites": [""],
+		"teacher": 
+			{"firstName": "Kerstin",
+			"lastName": "Kristiansson"},
+		"averageScore": 4.6
 	}
 ]
-}
+
+
+
 
 

@@ -12,5 +12,8 @@ Bilder för kurserna.
 
 Färger på knapparna.
 
+Defer så att js kan läggas överst.
+async/await på fetch()
+
 
 
