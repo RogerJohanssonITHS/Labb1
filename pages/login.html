@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/style_lab1.css" />
+    <link rel="stylesheet" href="../css/style_modal_lab1.css" />
     <title>Inloggning - WestCoast Education</title>
   </head>
   <body>
@@ -27,6 +28,35 @@
           <label for="pwd">Lösenord:</label>
           <input class="input-text" type="password" id="pwd" name="pwd">
       </div>
+      <div class="grid-item grid-item-2 content">
+        Tryck för att visa modal dialogruta om admin inloggad.<br>
+        Eller kursinfo om student (pågående kurser/avslutade/kommande).
+      </div>
+
+<!-- Trigger/Open The Modal -->
+<button class= "button" id="myBtn">Lägg till kurs</button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content <span class="close">&times;</span>-->
+  <div class="modal-content">
+    <span class="close">X</span>
+    <div class="grid-item grid-item-2 content">
+      Lägg till kursinformationen:
+        <label for="courseName">Kursnamn:</label>
+        <input class="input-text" type="text" id="courseName" name="courseName">
+        <label for="courseNumber">Kursnummer:</label>
+        <input class="input-text" type="text" id="courseNumber" name="courseNumber">
+        <label for="username">Kursbeskrivning:</label>
+        <input class="input-text" type="text" id="contents" name="contents">
+        <label for="pwd">Kurslängd:</label>
+        <input class="input-text" type="text" id="courseLength" name="courseLength">
     </div>
+  </div>
+
+  </div>
+  </div>
+  <script src="../js/modal.js"></script>
   </body>
 </html>

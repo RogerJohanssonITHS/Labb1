@@ -1,6 +1,3 @@
-Skapa objekt med kurserna på ett JSON-format.
-Kan tillsvidare läggas i javascript-filen.
-
 Utifrån val av undervisningsmetod, skapa
 type = "checkbox" där man kan välja kursen
 (sedan lägga i varukorg). Köpa markerade-knapp?
@@ -8,12 +5,13 @@ type = "checkbox" där man kan välja kursen
 Visa sidan på laptop och nalle. @media.
 github pages.
 
-Bilder för kurserna.
-
-Färger på knapparna.
 
 Defer så att js kan läggas överst.
 async/await på fetch()
+
+Kundvagnen: visa kurser/ta bort kurser. Modal dialogruta?
+
+Inloggning: admin/elev/kund.
 
 
 

@@ -1,6 +1,7 @@
 [
 	{
 		"courseName": "Brython",
+		"courseNumber": 1,
 		"image":
 			{"imageName":"Brython.png",
 			"imageAltText": "Brython logo",
@@ -11,10 +12,12 @@
 		"teacher": 
 			{"firstName": "Fredrik",
 			"lastName": "Fredriksson"},
-		"averageScore": 3.4
+		"averageScore": 3.4,
+		"courseLength": 80
 	},
 	{
 		"courseName": "Julia",
+		"courseNumber": 2,
 		"image":
 			{"imageName":"Julia.svg",
 			"imageAltText": "Julia logo",
@@ -25,21 +28,24 @@
 		"teacher": 
 			{"firstName": "August",
 			"lastName": "Lindberg"},
-		"averageScore": 3.9
+		"averageScore": 3.9,
+		"courseLength": 120
 	},
 	{
 		"courseName": "COBOL",
+		"courseNumber": 3,
 		"image":
 			{"imageName":"COBOL.png",
 			"imageAltText": "COBOL logo",
 			"imageTitle": "COBOL logo"},
 		"learningPath": ["On demand"],
-		"contents": "COBOL kommer att leva kvar länge och kompetens inom programmespråket börjar bli en bristvara.",
+		"contents": "COBOL kommer att leva kvar länge och kompetens inom programspråket börjar bli en bristvara.",
 		"prerequisites": [""],
 		"teacher": 
 			{"firstName": "Kerstin",
 			"lastName": "Kristiansson"},
-		"averageScore": 4.6
+		"averageScore": 4.6,
+		"courseLength": 240
 	}
 ]
 

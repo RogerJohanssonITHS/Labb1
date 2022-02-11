@@ -1,0 +1,26 @@
+[
+	{
+		"firstName": "Brython",
+		"lastName": "dssssd",
+		"category": "admin",
+		"userName": "fdfdd",
+		"password": "qwerty",
+		"email": "sdsddsdsds@fdfddf.com",
+		"courses":
+			{"currentCourses": [],
+			"completedCourses": [],
+			"comingCourses": []}
+	},
+	{
+		"firstName": "Bryhon",
+		"lastName": "dssd",
+		"category": "pupil",
+		"userName": "fdd",
+		"password": "erty",
+		"email": "sdsdds@fdfddf.com",
+		"courses":
+			{"currentCourses": [1, 2],
+			"completedCourses": [],
+			"comingCourses": [3]}
+	}
+]
