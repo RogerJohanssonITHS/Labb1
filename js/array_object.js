@@ -41,20 +41,24 @@ function displayFilteredCourseList() {
     for (let i = 0; i < courses.length; i++) {
         const course = courses[i];
 
-        //add course image and course description
-        div.innerHTML += `<table width = "600px"><tr><td><img src="../images/${course.image.imageName}" alt="${course.image.imageAltText}"
-        title="${course.image.imageTitle}" width="200" height="125"></td><td><p>${course.contents}<br>
-        Lärare: ${course.teacher.firstName} ${course.teacher.lastName}</p></td></tr></table>`
-
-        //loop over learningPath and add checkboxes
+        //select courses where at least one checkbox were selected
         for (let j  = 0; j   < course.learningPath.length; j++) {
-            const element = course.learningPath[j];
-            div.innerHTML += `<input class="input-second" type="checkbox" id="${element}" name="${element}" value="klassrum"> ${element}`             
-        }
+          if (true) {
+                    //add course image and course description
+                    div.innerHTML += `<table width = "600px"><tr><td><img src="../images/${course.image.imageName}" alt="${course.image.imageAltText}"
+                    title="${course.image.imageTitle}" width="200" height="125"></td><td><p>${course.contents}<br>
+                    Lärare: ${course.teacher.firstName} ${course.teacher.lastName}</p></td></tr></table>`
+
+                    //loop over learningPath and add checkboxes
+                    for (let j  = 0; j   < course.learningPath.length; j++) {
+                        const element = course.learningPath[j];
+                        div.innerHTML += `<input class="input-second" type="checkbox" id="${element}" name="${element}" value="klassrum"> ${element}`             
+                    }
+                    break;
+          }
+      }
         //add a divider
         div.innerHTML += `<br><br><br>`
-
-
     }
 }
 

@@ -29,18 +29,20 @@
 
       <div class="grid-item grid-item-3 content">Välj undervisningsform:         
           <label for="undervisningsform">
-            <input class="input" type="checkbox" id="klassrum" name="klassrum" value="klassrum"> Klassrum
-            <input class="input-second" type="checkbox" id="distans" name="distans" value="distans"> Distans
-            <input class="input-second" type="checkbox" id="ondemand" name="ondemand" value="ondemand"> On demand
+            <input class="input" type="checkbox" id="klassrum" name="learningpath" value="Klassrum"> Klassrum
+            <input class="input-second" type="checkbox" id="distans" name="learningpath" value="Distans"> Distans
+            <input class="input-second" type="checkbox" id="ondemand" name="learningpath" value="On demand"> On demand
           </label>
-      <button class = "button" onclick="displayFilteredCourseList()">Visa</button>
-      <button class = "button" onclick="clearList()">Rensa</button>
+      <button class = "button"  id = "btn_get" onclick="displayFilteredCourseList()">Visa</button>
+      <button class = "button" id = "btn_clear" onclick="clearList()">Rensa</button>
       <button class = "button" onclick="sortList()">Sortera</button>
+
       </div>
     </div>
     
     <h1 id = "demo">Kurser</h1>
 
     <script src="../js/array_object.js"></script>
+    <script src="../js/checkbox_button.js"></script>
   </body>
 </html>
