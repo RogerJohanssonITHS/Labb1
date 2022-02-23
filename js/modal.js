@@ -23,3 +23,12 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+//read fields from modal.
+//create new Course object
+
+// save data from modal to courses.json
+const FileSystem = require("fs");
+ FileSystem.writeFile('file.json', JSON.stringify(proj), (error) => {
+    if (error) throw error;
+  });

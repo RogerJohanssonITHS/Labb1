@@ -1,6 +1,5 @@
 const jsonRequest = new Request("../json/courses.json");
 
-
 const courses = [];
 
 class Course {
