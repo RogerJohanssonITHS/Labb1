@@ -6,9 +6,6 @@ Visa sidan på laptop och nalle. @media.
 github pages.
 
 
-Defer så att js kan läggas överst.
-async/await på fetch()
-
 Kundvagnen: visa kurser/ta bort kurser. Modal dialogruta?
 
 Inloggning: admin/elev/kund.
