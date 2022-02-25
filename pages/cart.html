@@ -32,11 +32,14 @@
         Eller kursinfo om student (pågående kurser/avslutade/kommande).
       </div>
 
-<!-- Trigger/Open The Modal -->
-<button class= "button" id="myBtn">Köp och betala</button>
+
 
 <p>Här skall vi ha en lista med dom kurser som ligger i kundvagnen. Kunna ta bort.</p>
-
+<!-- Trigger/Open The Modal -->
+<button class= "button" id="myBtn">Köp och betala</button>
+<!-- Refresh selected courses -->
+<button class= "button" id="Refresh" onclick="refreshList()">Uppdatera</button>
+<ul id="myCoursesInList"></ul>
 <!-- The Modal -->
 <div id="myModal" class="modal">
 
@@ -51,5 +54,13 @@
   </div>
   </div>
   <script src="../js/modal.js"></script>
+  <script src="../js/cart.js"></script>
+
+  <!-- script to receive info about which courses to put in the cart -->
+<!--   <script>
+    var b = localStorage.getItem("myValue");
+    alert("The Value Received is " + b);
+    var resetValue = 0;
+    localStorage.setItem("myValue", resetValue);</script> -->
   </body>
 </html>

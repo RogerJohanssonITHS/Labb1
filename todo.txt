@@ -1,14 +1,14 @@
-Utifrån val av undervisningsmetod, skapa
-type = "checkbox" där man kan välja kursen
-(sedan lägga i varukorg). Köpa markerade-knapp?
+Kundvagnen: visa kurser/ta bort kurser.
 
 Visa sidan på laptop och nalle. @media.
+
 github pages.
 
-
-Kundvagnen: visa kurser/ta bort kurser. Modal dialogruta?
+Modal dialogruta: lägga till kurs.
 
 Inloggning: admin/elev/kund.
+
+
 
 
 

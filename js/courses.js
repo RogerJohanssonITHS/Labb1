@@ -31,16 +31,36 @@ class Course {
   btn_movetocart.className = "button";
   btn_movetocart.id = "btn_movetocart"
   btn_movetocart.innerHTML = "Lägg i kundvagn";
+  
   btn_movetocart.onclick = function () {
-    //move selected items to cart
+    //move course name and learning path selection to cart
+    //const btn_movetocart = document.querySelector('#btn_movetocart');
+    const learningPaths = ["Klassrum", "Distans", "On demand"];
+    let valuesFilteredList = [];
+    let checkboxesFilteredList = document.querySelectorAll('input[name="Klassrum"]:checked');
+    checkboxesFilteredList.forEach((checkbox) => {
+          valuesFilteredList.push(checkbox.value);
+      });
+    checkboxesFilteredList = document.querySelectorAll('input[name="Distans"]:checked');
+     checkboxesFilteredList.forEach((checkbox) => {
+           valuesFilteredList.push(checkbox.value);
+       });
+    checkboxesFilteredList = document.querySelectorAll('input[name="On demand"]:checked');
+    checkboxesFilteredList.forEach((checkbox) => {
+          valuesFilteredList.push(checkbox.value);
+       });
+    //store course name and learning path in local storage
+    var valuesForCart=valuesFilteredList;
+    localStorage.setItem("myValue", JSON.stringify(valuesForCart));
+    window.location.href="courses.html";
     
+
     //clear list
     clearList();
   };
   
 
   const btn_get = document.querySelector('#btn_get');
-  //const btn_check = document.querySelector('#btn_check');
   btn_get.addEventListener('click', (event) => {
       let checkboxes = document.querySelectorAll('input[name="learningpath"]:checked');
       let values = [];
@@ -71,7 +91,7 @@ class Course {
               //loop over learningPath and add checkboxes for all options; not just the selected checkboxes
               for (let j  = 0; j   < course.learningPath.length; j++) {
                 const element = course.learningPath[j];
-                div.innerHTML += `<input class="input-second" type="checkbox" id="${element}" name="${element}" value="klassrum"> ${element}`             
+                div.innerHTML += `<input class="input-second" type="checkbox" id="${element}" name="${element}" value="${course.courseName}   ${element}"> ${element}`             
                 }
                 
                 break;
@@ -105,4 +125,3 @@ function uncheckAll(checked = false) {
     var myList = document.getElementById("myFilteredCourseList");
     myList.remove();
 }
-
