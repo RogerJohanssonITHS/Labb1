@@ -5,13 +5,14 @@ const courses = [];
 class Course {
     constructor(input) {
       this.courseName = input.courseName;
+      this.courseNumber = input.courseNumber;
       this.image = input.image;
       this.learningPath = input.learningPath;
       this.contents = input.contents;
       this.prerequisites = input.prerequisites;
       this.teacher = input.teacher;
       this.averagescore = input.averagescore;
-
+      this.courseLength = input.courseLength;
     }
   }
 

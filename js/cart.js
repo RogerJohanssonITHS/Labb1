@@ -1,19 +1,20 @@
-const jsonRequest = new Request("../json/courses.json");
+/* const jsonRequest = new Request("../json/courses.json");
 
 const courses = [];
 
 class Course {
-    constructor(input) {
-      this.courseName = input.courseName;
-      this.image = input.image;
-      this.learningPath = input.learningPath;
-      this.contents = input.contents;
-      this.prerequisites = input.prerequisites;
-      this.teacher = input.teacher;
-      this.averagescore = input.averagescore;
-
-    }
+  constructor(input) {
+    this.courseName = input.courseName;
+    this.courseNumber = input.courseNumber;
+    this.image = input.image;
+    this.learningPath = input.learningPath;
+    this.contents = input.contents;
+    this.prerequisites = input.prerequisites;
+    this.teacher = input.teacher;
+    this.averagescore = input.averagescore;
+    this.courseLength = input.courseLength;
   }
+}
 
   fetch(jsonRequest)
   .then((response) => response.json())
@@ -24,7 +25,7 @@ class Course {
     }
     //createCourseList(courses);
   })
-  .catch(console.error);
+  .catch(console.error); */
   
 //list course and learning path with check box.
 //use local storage variable b
