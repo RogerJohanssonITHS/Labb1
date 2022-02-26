@@ -53,8 +53,9 @@ for (let i = 0; i < useForList.length; i++) {
   //const course = courses[i];
   textnode = document.createTextNode(`${useForList[i]}`);
   node = document.createElement("li");
+  node.innerHTML += `<input class="input-second" type="checkbox" id="tabort" name="${useForList[i]}" value="${i}">Ta bort&nbsp&nbsp`;
   node.appendChild(textnode);
-  node.innerHTML += `<input class="input-second" type="checkbox" id="tabort" name="${useForList[i]}" value="${useForList[i]}">Ta bort`;
+  
   document.getElementById("myCoursesInList").appendChild(node);
   //div.innerHTML += `${useForList[i]}`;
   //div.innerHTML += `<input class="input-second" type="checkbox" id="tabort" name="${useForList[i]}" value="${useForList[i]}">Ta bort`;
@@ -71,16 +72,29 @@ localStorage.setItem("myValue", resetValue);
 
 function refreshList() {
   //function to remove courses from cart where Ta bort is selected
-  var myList = document.getElementById("myCoursesInCart");
-
+  var myList = document.getElementById("myCoursesInList");
+  let valuesCoursesInCart = [];
   //find checkboxes
   //let valuesCoursesInCart = [];
   let checkboxesCoursesInCart = document.querySelectorAll('input[id="tabort"]:checked');  // #tabort:checked
-  for (let i = 0; i < checkboxesCoursesInCart.length; i++) {
-    checkboxesCoursesInCart[i].parentNode.removeChild(checkboxesCoursesInCart[i]);
+
+    checkboxesCoursesInCart.forEach((checkbox) => {
+      valuesCoursesInCart.push(checkbox.value);
+  });
+    //checkboxesCoursesInCart[i].remove();
+    //checkboxesCoursesInCart[i].parentNode.removeChild(checkboxesCoursesInCart[i]);
     //var itemToRemove = document.getElementById(checkboxesCoursesInCart[i]);
     //itemToRemove.parentNode.removeChild(itemToRemove);
-  }
+    //document.getElementById(checkboxesCoursesInCart[i]).innerHTML = '';
+    //document.getElementById('myList').innerHTML = '';
+    //var ulElem = document.getElementById('myList');
+    for (let j = 0; j < valuesCoursesInCart.length; j++) {
+      const element = valuesCoursesInCart[j];
+      myList.removeChild(myList.childNodes[element])
+    }
+    
+    //myList.removeChild(myList.childNodes[0])
+
   //compare value from checkbox and id. If matches, remove.
   
 

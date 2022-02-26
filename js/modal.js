@@ -25,7 +25,13 @@ window.onclick = function(event) {
 }
 
 //read fields from modal.
-//create new Course object
+
+
+//create new default Course object
+
+//read current courses.json
+
+//add new course
 
 // save data from modal to courses.json
 const FileSystem = require("fs");
