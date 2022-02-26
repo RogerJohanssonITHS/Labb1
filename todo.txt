@@ -3,6 +3,7 @@ Modal dialogruta: lägga till kurs.
 Visa sidan på laptop och nalle. @media.
 
 github pages.
+https://rogerjohanssoniths.github.io/Labb1/
 
 
 
