@@ -1,12 +1,9 @@
 Modal dialogruta: lägga till kurs.
 
-Kundvagnen: visa kurser/ta bort kurser.
-
 Visa sidan på laptop och nalle. @media.
 
 github pages.
 
-Inloggning: admin/elev/kund.
 
 
 

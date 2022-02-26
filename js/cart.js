@@ -1,55 +1,14 @@
-/* const jsonRequest = new Request("../json/courses.json");
-
-const courses = [];
-
-class Course {
-  constructor(input) {
-    this.courseName = input.courseName;
-    this.courseNumber = input.courseNumber;
-    this.image = input.image;
-    this.learningPath = input.learningPath;
-    this.contents = input.contents;
-    this.prerequisites = input.prerequisites;
-    this.teacher = input.teacher;
-    this.averagescore = input.averagescore;
-    this.courseLength = input.courseLength;
-  }
-}
-
-  fetch(jsonRequest)
-  .then((response) => response.json())
-  .then((data) => {
-    for (let i = 0; i < data.length; i++) {
-      const course = new Course(data[i]);
-      courses.push(course);
-    }
-    //createCourseList(courses);
-  })
-  .catch(console.error); */
-  
+ 
 //list course and learning path with check box.
-//use local storage variable b
-// course name    learning path    checkbox
-
+//use local storage variable
 var receivedValues = localStorage.getItem("myValue");
 var useForList = JSON.parse(receivedValues);
-alert("The Value Received is " + useForList);
-
-/* let div = document.createElement("div");
-div.id = "myCoursesInCart";
-document.body.appendChild(div);
-for (let i = 0; i < useForList.length; i++) {
-  //const course = courses[i];
-  div.innerHTML += `${useForList[i]}`;
-  div.innerHTML += `<input class="input-second" type="checkbox" id="tabort" name="${useForList[i]}" value="${useForList[i]}">Ta bort`;
-} */
 
 
 
 var node = document.createElement("li");
 var textnode = document.createTextNode("");
-//node.appendChild(textnode);
-//document.getElementById("myCoursesInList").appendChild(node);
+
 for (let i = 0; i < useForList.length; i++) {
   //const course = courses[i];
   textnode = document.createTextNode(`${useForList[i]}`);
@@ -58,17 +17,11 @@ for (let i = 0; i < useForList.length; i++) {
   node.appendChild(textnode);
   
   document.getElementById("myCoursesInList").appendChild(node);
-  //div.innerHTML += `${useForList[i]}`;
-  //div.innerHTML += `<input class="input-second" type="checkbox" id="tabort" name="${useForList[i]}" value="${useForList[i]}">Ta bort`;
 }
-//const textnode = document.createTextNode("Water");
-//node.appendChild(textnode);
-//document.getElementById("myCoursesInCart").appendChild(node);
+
 
 var resetValue = 0;
 localStorage.setItem("myValue", resetValue);
-
-
 
 
 function refreshList() {

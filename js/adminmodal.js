@@ -50,16 +50,15 @@ span.onclick = function() {
   var modalCourseNumber = document.getElementById('courseNumber').value;
   var modalContents = document.getElementById('contents').value;
   var modalCourseLength = document.getElementById('courseLength').value;
-  alert(modalCourseName + modalCourseNumber +modalContents + modalCourseLength);
   modal.style.display = "none";
   //create Course object
   const modalCourse = new Course(modalCourseName, modalCourseNumber, "Klassrum", modalContents, "NA", "NA", "NA", modalCourseLength);
+  const modalCourse = new Course();
   courses.push(modalCourse);
-  // save data from modal to courses.json
-const FileSystem = require("fs");
-FileSystem.writeFile('file.json', JSON.stringify(courses, (error) => {
-   if (error) throw error;
- }))
+  // save data from modal to local storage
+  var coursesLocalStorage=courses;
+  localStorage.setItem("myAddedCourses", JSON.stringify(coursesLocalStorage));
+  window.location.href="admin.html";
 }
 
 // When the user clicks anywhere outside of the modal, close it
@@ -68,27 +67,3 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
-
-//read fields from modal.
-
-function saveModalData() { 
-  document.getElementById('txtNmeComp').value = document.getElementById('courseName').value;
-  //document.getElementById('txtAdrComp').value = document.getElementById('TextArea2').value; 
-  //document.getElementById('txtConctComp').value = document.getElementById('TextArea3').value;
-  alert("tjoho");
-}
-
-
-
-
-//create new default Course object
-
-
-
-//add new course
-
-// save data from modal to courses.json
-const FileSystem = require("fs");
- FileSystem.writeFile('file.json', JSON.stringify(proj), (error) => {
-    if (error) throw error;
-  });

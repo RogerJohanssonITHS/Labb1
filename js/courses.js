@@ -27,6 +27,20 @@ class Course {
   })
   .catch(console.error);
 
+
+  //if new courses have been added, use local storage variable
+/*   if (localStorage.getItem("myAddedCourses").length !== null) {
+    courses = JSON.parse("myAddedCourses", Course);
+    alert(courses);
+  } */
+  if (localStorage.getItem("myAddedCourses") !== null) {
+    //courses = JSON.parse("myAddedCourses", Course);
+    //alert(courses);
+  }
+
+
+  window.localStorage.removeItem("myAddedCourses");
+
   //prepare button move to cart
   let btn_movetocart = document.createElement("button");
   btn_movetocart.className = "button";
