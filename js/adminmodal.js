@@ -53,7 +53,6 @@ span.onclick = function() {
   modal.style.display = "none";
   //create Course object
   const modalCourse = new Course(modalCourseName, modalCourseNumber, "Klassrum", modalContents, "NA", "NA", "NA", modalCourseLength);
-  const modalCourse = new Course();
   courses.push(modalCourse);
   // save data from modal to local storage
   var coursesLocalStorage=courses;

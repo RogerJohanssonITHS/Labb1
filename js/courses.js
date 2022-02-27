@@ -23,7 +23,6 @@ class Course {
       const course = new Course(data[i]);
       courses.push(course);
     }
-    //createCourseList(courses);
   })
   .catch(console.error);
 
@@ -69,7 +68,6 @@ class Course {
     localStorage.setItem("myValue", JSON.stringify(valuesForCart));
     window.location.href="courses.html";
     
-
     //clear list
     clearList();
   };
@@ -87,7 +85,6 @@ class Course {
           return;         
       }
        //Which learningPath checkboxes are checked?
-      //var x = document.getElementById("myCheck").checked;
       let div = document.createElement("div");
       div.id = "myFilteredCourseList";
       document.body.appendChild(div);
@@ -95,11 +92,10 @@ class Course {
         const course = courses[i];
 
         //select courses where at least one checkbox matches learningPath
-        //compare checkbox values with learningPath  course.learningPath.length
         for (let j  = 0; j   < values.length; j++) {
           if (course.learningPath.includes(values[j])) {
               //add course image and course description
-              div.innerHTML += `<table width = "600px"><tr><td><img src="../images/${course.image.imageName}" alt="${course.image.imageAltText}"
+              div.innerHTML += `<table><tr><td><img src="../images/${course.image.imageName}" alt="${course.image.imageAltText}"
               title="${course.image.imageTitle}" width="200" height="125"></td><td><p>${course.contents}<br>
               Lärare: ${course.teacher.firstName} ${course.teacher.lastName}</p></td></tr></table>`
 
@@ -107,8 +103,7 @@ class Course {
               for (let j  = 0; j   < course.learningPath.length; j++) {
                 const element = course.learningPath[j];
                 div.innerHTML += `<input class="input-second" type="checkbox" id="${element}" name="${element}" value="${course.courseName}   ${element}"> ${element}`             
-                }
-                
+                }                
                 break;
           }
       }

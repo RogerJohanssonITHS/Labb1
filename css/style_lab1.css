@@ -3,6 +3,7 @@ body {
   color: rgb(31, 39, 27);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, monospace;
   background-color: rgb(203, 185, 168);
+  width: 90vw;
 }
 
 /*********** Form ***********/
@@ -37,7 +38,7 @@ label {
 }
 
 .input-text {
-  width: 50vw;
+  width: 75%;
   height: 18px;
   padding: 0px;
   margin: 0;
@@ -63,12 +64,13 @@ label {
 
 /*********** Table ***********/
 
-
 table {
   border-spacing: 10px;
+  max-width: 25em;
 }
 
 /*********** Grid ***********/
+
 .grid-container {
   display: grid;
   grid-template-columns: auto auto auto;
@@ -81,7 +83,6 @@ table {
   font-size: 1em;
   text-align: left;
   max-width: 30em;
-  border: 1px solid rgba(0, 0, 0, 0.8);
 }
 
 .grid-item-1 {
@@ -96,6 +97,7 @@ table {
 .grid-item-3 {
   background-color: rgba(255, 255, 255, 0.8);
 }
+
 
 /*********** Content ***********/
 
@@ -119,7 +121,7 @@ table {
   display: block;
   color: rgb(11, 79, 108);
   letter-spacing: 0.1em;
-  font-size: 1.5em;
+  font-size: 1.3em;
   text-align: center;
   font-weight: bold;
   padding: 0.3em 0.6em 0.4em 0.6em;
